@@ -22,14 +22,28 @@
 
 ### _Initial Setup_
 
-- USPTO Strap
-- Bootstrap
-- NGX Bootstrap
-- Font awesome
+x USPTO Strap
+x Bootstrap
+x NGX Bootstrap
+x Font awesome
+x AG Grid
+x NGX Logger
+x NGX Toastr
+x NGXS state management
+
+### _Order of setup_
+
+- Global header
 - AG Grid
-- NGX Logger
-- NGX Toastr
-- NGXS state management
+  - Download
+  - Export
+  - Filters
+  - Message
+  - Pagination
+  - Records
+  - Save grid preferences
+- Loading
+- State management 
 
 ### _App structure_
 
