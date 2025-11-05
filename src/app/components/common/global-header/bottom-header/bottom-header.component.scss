@@ -1,0 +1,19 @@
+.case-viewer-item {
+  background-color: #e2e2e2;
+
+  a {
+    color: black !important;
+  }
+}
+
+.case-viewer-nav-link {
+  font-size: .875rem;
+  line-height: 1;
+  outline-offset: 0;
+  display: block;
+  padding: .5rem 1rem;
+}
+
+#bottom-header {
+  min-height: 30px;
+}

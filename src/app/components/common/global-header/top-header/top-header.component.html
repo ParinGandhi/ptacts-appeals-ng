@@ -1,0 +1,20 @@
+<div class="uspto-header-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a
+      [attr.aria-describedby]="usptoLink.DESCRIPTION"
+      [href]="usptoLink.LINK"
+      target="_blank"
+      class="uspto-logo"
+      [title]="usptoLink.TITLE"
+    >
+      <span class="sr-only">{{ usptoLink.DESCRIPTION }}</span>
+    </a>
+    <div id="banner">{{ banner }}</div>
+    <div class="ml-auto d-flex">
+      <div class="display-inline dyn-menuarea">
+        <ptacts-notifications-modal></ptacts-notifications-modal>
+        <ptacts-user-actions></ptacts-user-actions>
+      </div>
+    </div>
+  </nav>
+</div>
