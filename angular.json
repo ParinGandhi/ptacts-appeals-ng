@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "ptacts",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -33,7 +33,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/uswds/dist/css/uswds.min.css",
+              "node_modules/usptostrap/assets/css/usptostrap.min.css",
               "node_modules/ag-grid-community/styles/ag-grid.min.css",
               "node_modules/ag-grid-community/styles/ag-theme-balham.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",

@@ -1,0 +1,100 @@
+
+$widget-border: #ccc;
+$red: #d83933;
+$yellow: #ffbe2e;
+$green: #008139;
+$blue: #005ea2;
+$purple: #671e75;
+$black: #000000;
+$gray: #757575;
+
+.widgetHeightSmall {
+    height: 359px;
+    border: 1px solid $widget-border;
+  }
+  
+  .widgetHeightMedium {
+    height: 700px;
+    border: 1px solid $widget-border;
+  }
+  
+  .widgetHeightLarge {
+    height: 1050px;
+    border: 1px solid $widget-border;
+  }
+
+  .widgetHeightXlarge {
+    height: 1750px;
+    border: 1px solid $widget-border;
+  }
+  
+  .underline {
+    border-bottom: 3px solid;
+    background-color: #f5f5f5;
+  }
+  
+  .underline-red {
+    border-bottom-color: $red;
+   }
+ 
+   .red {
+     color: $red;
+     border-bottom-color: $red;
+   }
+
+   .underline-yellow {
+    border-bottom-color: $yellow;
+   }
+ 
+   .yellow {
+     color: $yellow;
+   }
+
+   .underline-green {
+    border-bottom-color: $green;
+   }
+ 
+   .green {
+     color: $green;
+   }
+
+   .underline-blue {
+    border-bottom-color: $blue;
+   }
+ 
+   .blue {
+    border-bottom-color: $blue;
+     color: $blue;
+   }
+
+   .underline-purple {
+    border-bottom-color: $purple;
+   }
+ 
+   .purple {
+     color: $purple;
+   }
+
+   .underline-black {
+    border-bottom-color: $black;
+   }
+ 
+   .black {
+     color: $black;
+   }
+
+   .underline-gray {
+    border-bottom-color: $gray;
+   }
+ 
+   .gray {
+     color: $gray;
+   }
+
+.widget-action-icons {
+    color: #999;
+    cursor: pointer;
+    &:hover {
+        color: $black;
+       }
+   } 

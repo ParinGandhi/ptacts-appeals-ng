@@ -1,0 +1,13 @@
+<button
+  type="button"
+  title="Clear all filters"
+  class="btn btn-light btn-sm"
+  (click)="clearAllFilters()"
+>
+  <i class="fas fa-filter"></i>
+  <span
+    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary filter-count"
+  >
+    {{ getFilterCount() }}
+  </span>
+</button>

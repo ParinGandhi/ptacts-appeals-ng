@@ -1,0 +1,117 @@
+$ag-odd-row-background-color: #f3f3f3;
+
+.ag-theme-balham .ag-row-odd {
+    background-color: $ag-odd-row-background-color;
+  }
+
+  .ag-cell-wrap-text {
+    word-break: break-word;
+  }
+  
+  .ag-header-row {
+    background-color: #1596d1;
+  }
+  
+  .ag-header-row {
+    background-color: #f3f3f3;
+    color: #444444 !important;
+  }
+  
+  .ag-cell-wrap-text {
+    word-break: break-word !important;
+  }
+  
+  .ag-theme-balham {
+    font-family: "Segoe UI", "Helvetica Neue", Tahoma, Arial, sans-serif !important;
+    font-size: 13px !important;
+  }
+  
+  .ag-floating-filter-button {
+    display: none !important;
+  }
+  
+  .ag-header-cell-text {
+    overflow: visible !important;
+    text-overflow: unset !important;
+    white-space: normal !important;
+  }
+  
+  .ag-header-icon .ag-header-cell-menu-button {
+    display: none !important;
+  }
+  
+  .ag-theme-balham .ag-header-cell::after,
+  .ag-theme-balham .ag-header-group-cell::after {
+    top: 0 !important;
+    height: 100% !important;
+    background-color: #d4d4d4 !important;
+  }
+  
+  .ag-theme-balham .ag-ltr .ag-cell {
+    // border-right: 1px solid #D4D4D4 !important;
+    border-right: 1px solid #d4d4d4 !important;
+  }
+  
+  // .alternate-row {
+  //   background-color: #F3F3F3 !important;
+  // }
+  
+  .ag-theme-balham .ag-row-odd {
+    background-color: #f3f3f3 !important;
+  }
+  
+  .ag-theme-balham .ag-row-odd:hover {
+    background-color: #d5eaee !important;
+  }
+  
+  .ag-text-field-input {
+    border-color: #d4d4d4 !important;
+  }
+  
+  .ag-theme-balham .ag-cell {
+    padding: 4px !important;
+    line-height: 18px !important;
+  }
+  
+  .ag-header-cell {
+    padding: 4px !important;
+  }
+  
+  .ag-row-hover {
+    background-color: #d5eaee !important;
+  }
+  
+  .ag-theme-balham .ag-root-wrapper-body .ag-checkbox-input-wrapper {
+    background: none;
+  }
+  
+  .ag-theme-balham .ag-root-wrapper-body .ag-checkbox-input-wrapper::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    font-size: 1.3rem;
+    content: "\f00c";
+    color: #dededc;
+  }
+  
+  .ag-theme-balham
+    .ag-root-wrapper-body
+    .ag-checkbox-input-wrapper.ag-checked::after {
+    content: "\f00c";
+    color: black;
+  }
+  
+  .ag-theme-balham
+    .ag-root-wrapper-body
+    .ag-checkbox-input-wrapper.ag-indeterminate::after {
+    content: "\f068";
+    color: gray;
+  }
+  
+  .ag-tooltip {
+    background-color: #fff !important;
+    color: black !important;
+  }
+
+  .ag-sort-indicator-container {
+    margin-top: 11px !important;
+  }

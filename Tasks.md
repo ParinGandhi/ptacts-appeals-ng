@@ -51,7 +51,10 @@ x NGXS state management
   - common
     - global-header
       - bottom-header
+        - case-search
       - top-header
+        - notifications-modal
+        - user-actions
     - grid
       - download
       - export
@@ -196,3 +199,5 @@ x NGXS state management
 - Delete widget
 - Move widget
 - Customize widget
+
+

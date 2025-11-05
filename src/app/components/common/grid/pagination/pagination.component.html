@@ -1,0 +1,86 @@
+<div class="d-flex justify-content-between align-items-baseline">
+  <ptacts-records [gridDetails]="gridDetails"></ptacts-records>
+  <nav
+    aria-label="Page navigation example"
+    class="d-flex justify-content-end pt-3"
+  >
+    <div class="dropdown">
+      <button
+        class="btn btn-light dropdown-toggle per-page-button"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {{ currentRecordsPerPage }} per page
+      </button>
+      <ul class="dropdown-menu">
+        @for(perPage of recordsPerPage; track $index) {
+        <li>
+          <a class="dropdown-item" (click)="setPerPage(perPage)"
+            >{{ perPage }} per page</a
+          >
+        </li>
+      }
+      </ul>
+    </div>
+
+    <ul class="pagination">
+      <li>
+        <button
+        type="button"
+        title="First page"
+        class="page-link"
+        [disabled]="currentPage == 1"
+        (click)="goToPage('first')"
+      >
+        <i class="fa-solid fa-angles-left"></i>
+      </button>
+      </li>
+      <li>
+        <button
+        type="button"
+        title="Previous page"
+        class="page-link"
+        [disabled]="currentPage == 1"
+        (click)="goToPage('previous')"
+      >
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      </li>
+      <li class="page-item">
+        <input
+          min="1"
+          [max]="maxNumberOfPages"
+          class="form-control page-number-input"
+          placeholder="Input group example"
+          aria-label="Input group example"
+          aria-describedby="btnGroupAddon"
+          [(ngModel)]="currentPage"
+          (ngModelChange)="goToPage(currentPage)"
+        />
+      </li>
+      <li>
+        <button
+        type="button"
+        title="Next page"
+        class="page-link"
+        [disabled]="reachedLastPage"
+        (click)="goToPage('next')"
+      >
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+      </li>
+      <li>
+        <button
+        type="button"
+        title="Last page"
+        class="page-link"
+        [disabled]="reachedLastPage"
+        (click)="goToPage('last')"
+      >
+        <i class="fa-solid fa-angles-right"></i>
+      </button>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -9,10 +9,16 @@ import { withNgxsStoragePlugin } from '@ngxs/storage-plugin';
 import { provideStore } from '@ngxs/store';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideStore(
-[],
-withNgxsReduxDevtoolsPlugin(),
-withNgxsLoggerPlugin(),
-withNgxsRouterPlugin(),
-withNgxsStoragePlugin())]
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideStore([],
+      withNgxsReduxDevtoolsPlugin(),
+      withNgxsLoggerPlugin(),
+      withNgxsRouterPlugin(),
+      withNgxsStoragePlugin({
+        keys: '*'
+      })
+    )
+  ]
 };

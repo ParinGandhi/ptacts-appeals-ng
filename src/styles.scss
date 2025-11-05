@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+$gray-300: black;
+$border-radius: 0;
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* AG Grid custom */
+@import url('./app/styles/grid-styles.scss');
+
+/** Widgets **/
+@import url('./app/styles/widget-styles.scss');
+
+
+$ag-odd-row-background-color: #f3f3f3;
+$tab-border-color: #dddddd;
+$uspto-blue: #005ea2;
+$uspto-red: #d83933;
+$table-header-color: #f0f0f0;
+$wizard-blue: #004c97;
+
+* {
+  font-family: 'Public Sans Web', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+li.nav-item.active {
+  border-top: 3px solid #005EA2 !important;
+}
+
+li.nav-item {
+  border-radius: 0 !important;
+}
+
+.customClass {
+  background-color: white !important;
+}
+
+.search-labels {
+  font-size: 13px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.content {
+  min-height: 600px;
+}
+
+.required:after {
+  content: " *";
+  color: $uspto-red;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #495057 !important;
+}
+
+.nav-item .active {
+  font-weight: bold;
+  border-left: 1px solid #495057 !important;
+  border-right: 1px solid #495057 !important;
+  border-top: 1px solid #495057 !important;
+}
+
+.modal-fullScreen {
+  max-width: 97vw;
+}
+
+.uspto-accordian-header {
+  background-color: #eee
+}
+
+// .side-bar-active {
+//   background-color: #eee !important;
+//   border-left: 3px solid $uspto-blue !important;
+// }
+
+/** Temporary **/
+
+.show-me {
+  height: 250px;
+  border: 2px dotted black;
+}

@@ -1,0 +1,41 @@
+@if(gridDetails.gridLoading) {
+  <ng-container [ngTemplateOutlet]="showLoading"></ng-container>
+}@else {
+  <ng-container [ngTemplateOutlet]="showGrid"></ng-container>
+}
+
+<ng-template #showLoading>
+  <div class="row preloader">
+    <div class="col-md-12">
+      <div class="mx-auto loader"></div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #showGrid>
+
+    @if(gridDetails.gridOptions.rowData && gridDetails.gridOptions.rowData.length > 0) {
+    <div class="row">
+      <div class="col-md-12 grid-container">
+        <ag-grid-angular
+          class="ag-theme-balham grid-dimensions"
+          [gridOptions]="gridDetails.gridOptions"
+          [defaultColDef]="gridDetails.defaultColDef"
+        >
+        </ag-grid-angular>
+      </div>
+    </div>
+
+    @if(gridDetails.enablePagination) {
+    <div class="row">
+      <div class="col-md-12">
+        <ptacts-pagination [gridDetails]="gridDetails"></ptacts-pagination>
+      </div>
+    </div>
+  }
+} @else {
+  <ng-container [ngTemplateOutlet]="noDataFound"></ng-container>
+}
+</ng-template>
+
+<ng-template #noDataFound>No data found</ng-template>
