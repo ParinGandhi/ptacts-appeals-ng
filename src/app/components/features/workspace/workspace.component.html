@@ -1,1 +1,54 @@
-<p>workspace works!</p>
+<div class="tab-bar">
+  <div
+    class="tab"
+    *ngFor="let workspace of workspaces?.userWorkspaces; let i = index"
+    [class.active]="i === selectedTabIndex"
+    (click)="selectTab(workspace, i)"
+  >
+    <span *ngIf="workspace.defaultIndicator"
+      ><i class="fa-solid fa-house"></i
+    ></span>
+    {{ workspace!.userWorkspaceName | removeNbsp }}
+  </div>
+  <div class="tab">
+    <button
+      [disabled]="workspaces.userWorkspaces.length >= 7"
+      (click)="workspaceActions.openAddWorkspaceModal()"
+    >
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+  <app-workspace-actions
+    [userWorkspaces]="workspaces.userWorkspaces"
+  ></app-workspace-actions>
+</div>
+
+<div class="tab-content">
+  <div *ngFor="let workspace of workspaces?.userWorkspaces; let i = index">
+    <div *ngIf="i === selectedTabIndex">
+      @if(workspace.structure === STRUCTURE.FULL_VIEW) {
+      <app-full-view
+        [widgetsInfo]="workspace.userWorkspaceWidgetsData"
+      ></app-full-view>
+      } @else if (workspace.structure === STRUCTURE.TWO_COLUMN) {
+      <app-two-column
+        [widgetsInfo]="workspace.userWorkspaceWidgetsData"
+      ></app-two-column>
+      } @else if (workspace.structure === STRUCTURE.THREE_COLUMN) {
+      <app-three-column
+        [widgetsInfo]="workspace.userWorkspaceWidgetsData"
+      ></app-three-column>
+      } @else if (workspace.structure === STRUCTURE.LEFT_COLUMN) {
+      <app-left-column
+        [widgetsInfo]="workspace.userWorkspaceWidgetsData"
+      ></app-left-column>
+      } @else if (workspace.structure === STRUCTURE.RIGHT_COLUMN) {
+      <app-right-column></app-right-column>
+      } @else if (workspace.structure === STRUCTURE.FOUR_COLUMN) {
+      <app-four-column></app-four-column>
+      } @else if (workspace.structure === STRUCTURE.FIVE_COLUMN) {
+      <app-five-column></app-five-column>
+      }
+    </div>
+  </div>
+</div>
